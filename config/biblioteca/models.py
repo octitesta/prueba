@@ -13,6 +13,7 @@ class Libro(models.Model):
     codigo_autor = models.ForeignKey(Autor, on_delete=models.CASCADE)
     titulo = models.CharField(max_length=30)
     editorial = models.CharField(max_length=30)
-    paginas = models.IntegerField
+    paginas = models.IntegerField()
     def __str__(self):
         return '{} {}'.format(self.codigo,self.titulo)
+
